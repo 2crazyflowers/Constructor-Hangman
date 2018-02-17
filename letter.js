@@ -6,7 +6,7 @@
 
 var Letter = function(character, guessedCheck) {
 	this.character = character,
-	this.guessedCheck = true;
+	this.guessedCheck = false;
 	this.guessedLetter = function() {
 		if (guessedCheck === true) {
 			console.log(this.character);
@@ -18,7 +18,9 @@ var Letter = function(character, guessedCheck) {
 	this.printStats = function() {
     console.log(this);
     }
-}
-var letterOfWord = new Letter("x", true);
+};
 
-letterOfWord.printStats();
+module.exports = Letter;
+
+
+
